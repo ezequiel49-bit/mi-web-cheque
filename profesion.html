@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Profesión - Ezequiel Castillo</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historia.html">Mi Historia</a></li>
+                <li><a href="profesion.html">Mi Profesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="mi-profesion">
+            <h2>Mi Profesión y Conocimientos</h2>
+            <p>
+                Como estudiante de Ingeniería en Sistemas Computacionales, me enfoco en el diseño, 
+                desarrollo y optimización de soluciones tecnológicas. Busco aplicar mis conocimientos 
+                para crear software eficiente, seguro y que aporte valor.
+            </p>
+            
+            <h3>Mis áreas de interés y Conocimientos que Ejerzo:</h3>
+            <ul>
+                <li>Desarrollo Web (HTML, CSS)</li>
+                <li>Lógica de Programación y Algoritmos</li>
+                <li>Resolución de problemas técnicos</li>
+                <li>Gestión de Sistemas Operativos</li>
+                <li>Diseño Grafico</li>
+                <li>Herramientas Ofimáticas</li>
+                <li>tecnologías emergentes</li>
+                <li>Técnico Informático</li>
+            </ul>
+            <h2>MI PERFIL PROFECIONAL</h2>
+            <br>
+           <br>
+            <h3>Mis Certificados y Reconocimientos</h3>
+            <div class="carrusel-contenedor">
+                <img id="imagen-carrusel" src="diploma1.png" alt="Mis Certificados" width="400">
+                
+                <div class="carrusel-botones">
+                    <button onclick="cambiarImagen(-1)">◀ Anterior</button>
+                    <button onclick="cambiarImagen(1)">Siguiente ▶</button>
+                </div>
+            </div>
+
+            <script>
+                // Lista con los nombres exactos de fotos
+                const imagenes = ["educacion.jpg.jpg", "educacion1.jpg.jpg", "electricista.jpg.png","electricista1.jpg.png",
+                "electricista2.jpg.png", "electricista3.jpg.png", "uveg.jpg", "uveg1.jpg", "uveg2.jpg", "uveg3.jpg"];
+                let indiceActual = 0;
+
+                function cambiarImagen(direccion) {
+                    indiceActual = indiceActual + direccion;
+                    
+                    // Si llega al final, regresa al principio
+                    if (indiceActual >= imagenes.length) {
+                        indiceActual = 0;
+                    }
+                    // Si va hacia atrás del principio, va al último
+                    if (indiceActual < 0) {
+                        indiceActual = imagenes.length - 1;
+                    }
+                    
+                    // Cambia la imagen en la pantalla
+                    document.getElementById("imagen-carrusel").src = imagenes[indiceActual];
+                }
+            </script>
+        
+
+        </section>
+        
+            <p>Nuestra recompensa se encuentra en el ESFUERZO y no en el resultado... Un esfuerzo total es una victoria completa. (Mahatma Gandhi)</p>
+    </main>
+
+</body>
+</html>
